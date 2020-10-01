@@ -1,26 +1,105 @@
 <template>
-  <div class="s01">
+  <div>
+    <div class="s01">
       <form>
         <fieldset>
           <legend>Keyword</legend>
         </fieldset>
         <div class="inner-form">
-          <div class="input-field first-wrap">
-            <input id="search" type="text" placeholder="Type your keywords here" />
+          <div class="input-field first-wrap ui-widget">
+            <input
+              id="search"
+              type="text"
+              placeholder="Type your keywords here"
+            />
           </div>
           <div class="input-field third-wrap">
             <button class="btn-search" type="button">Search</button>
           </div>
         </div>
+        <nav
+          class="menum navbar navbar-light navbar-expand-md justify-content-center"
+        >
+          <div class="container">
+            <div
+              class="navbar-collapse collapse justify-content-between align-items-center w-100"
+              id="collapsingNavbar2"
+            >
+              <ul class="topBotomBordersOut navbar-nav mx-auto text-center">
+                <li class="nav-item">
+                  <a class="nav-link" href="#" id="comparision"> Comparision</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" id="alphabet">Alphabet</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Local</a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Numbers</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Phrases</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Questions</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Research</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Shopping</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- <div id="comparisionDiv">
+          <h1>Comparision Area</h1>
+        </div>
+        <div id="alphabetDiv">
+          <h1>Alphabet Area</h1>
+        </div>
+        <div id="localDiv">
+          <h1>Local Area</h1>
+        </div>
+        <div id="numbersDiv">
+          <h1>Numbers Area</h1>
+        </div>
+        <div id="phrasesDiv">
+          <h1>Phrases Area</h1>
+        </div>
+        <div id="questionsDiv">
+          <h1>Questions Area</h1>
+        </div>
+        <div id="researchDiv">
+          <h1>Research Area</h1>
+        </div>
+        <div id="shoppingDiv">
+          <h1>Shopping Area</h1>
+        </div> -->
       </form>
     </div>
+  </div>
 </template>
 
 <script>
-export default {}
-</script>
+export default {
+  methods: {
+    myFunction() {
+      $(document).ready(function () {
+        $("#comparision").change(function () {
+          $("#comparisionDiv").fadeIn();
+        });
+      });
+    },
+  },
 
+  async created() {
+    this.myFunction();
+  },
+};
+</script>
 <style>
+@import url('https://fonts.googleapis.com/css?family=Lobster');
 /**
  * Add the correct display in IE 9-.
  */
@@ -33,11 +112,15 @@ section {
   display: block;
 }
 
+legend{
+    font-family: black, "Lobster", cursive;
+}
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
+  font-family: "Lobster", cursive;
   font-size: 2em;
   margin: 0.67em 0;
 }
@@ -463,10 +546,10 @@ legend {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
-      justify-content: center;
+  justify-content: center;
   -ms-flex-align: center;
-      align-items: center;
-  font-family: 'Poppins', sans-serif;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
   background: url("~assets/search.jpeg");
   background-size: cover;
   background-position: center center;
@@ -492,9 +575,9 @@ legend {
   display: flex;
   width: 100%;
   -ms-flex-pack: justify;
-      justify-content: space-between;
+  justify-content: space-between;
   -ms-flex-align: center;
-      align-items: center;
+  align-items: center;
 }
 
 .s01 form .inner-form .input-field {
@@ -505,7 +588,7 @@ legend {
 .s01 form .inner-form .input-field input {
   height: 100%;
   background: #fff;
-  border-radius: .5px;
+  border-radius: 0.5px;
   border: 0;
   display: block;
   width: 100%;
@@ -528,16 +611,16 @@ legend {
   font-size: 20px;
 }
 
-.s01 form .inner-form .input-field input:hover, .s01 form .inner-form .input-field input:focus {
+.s01 form .inner-form .input-field input:hover,
+.s01 form .inner-form .input-field input:focus {
   box-shadow: none;
   outline: 0;
 }
 
 .s01 form .inner-form .input-field.first-wrap {
   -ms-flex-positive: 1;
-      flex-grow: 1;
+  flex-grow: 1;
 }
-
 
 .s01 form .inner-form .input-field.third-wrap {
   width: 180px;
@@ -549,10 +632,10 @@ legend {
   width: 100%;
   background: #4272d7;
   white-space: nowrap;
-  border-radius: .5px;
+  border-radius: 0.5px;
   font-size: 20px;
   color: #fff;
-  transition: all .2s ease-out, color .2s ease-out;
+  transition: all 0.2s ease-out, color 0.2s ease-out;
   border: 0;
   cursor: pointer;
 }
@@ -582,7 +665,7 @@ legend {
   }
   .s01 form .inner-form {
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     padding: 20px;
   }
   .s01 form .inner-form .input-field {
@@ -608,4 +691,49 @@ legend {
   }
 }
 
+/* Navbar */
+
+.nav-item {
+  font-family: Century Gothic;
+  color: white;
+  margin: 0 auto;
+  padding-top: 20px;
+  text-align: center;
+}
+.nav-item a {
+  color: white;
+  text-decoration: none;
+  font: 25px Century Gothic;
+  margin: 0px 10px;
+  padding: 10px 50px 10px 10px;
+  position: relative;
+  z-index: 0;
+}
+
+/* Top & Bottom Borders Out */
+.topBotomBordersOut a:before,
+.topBotomBordersOut a:after {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background: black;
+  content: "";
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.topBotomBordersOut a:before {
+  top: 0px;
+  transform: translateY(10px);
+}
+.topBotomBordersOut a:after {
+  bottom: 0px;
+  transform: translateY(-10px);
+}
+.topBotomBordersOut a:hover:before,
+.topBotomBordersOut a:hover:after {
+  opacity: 1;
+  transform: translateY(0px);
+}
 </style>
