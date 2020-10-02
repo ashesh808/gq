@@ -1,25 +1,18 @@
 <template>
   <div>
+    <SearchBar />
     <Nuxt />
   </div>
 </template>
 
 <style>
-html {
-  line-height: 1.15;
-  /* 1 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
-}
-
-/* Sections
-   ========================================================================== */
-/**
- * Remove the margin in all browsers (opinionated).
- */
-body {
-  margin: 0;
-}
 </style>
+
+<script>
+import SearchBar from "@/components/SearchBar";
+export default {
+  components: {
+    SearchBar,
+  },
+};
+</script>

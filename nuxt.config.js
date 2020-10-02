@@ -1,48 +1,55 @@
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'keyword',
-    meta: [{
-        charset: 'utf-8'
+    title: "keyword",
+    meta: [
+      {
+        charset: "utf-8"
       },
       {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1'
+        name: "viewport",
+        content: "width=device-width, initial-scale=1"
       },
       {
-        hid: 'description',
-        name: 'description',
-        content: ''
+        hid: "description",
+        name: "description",
+        content: ""
       }
     ],
-    link: [{
-        rel: 'icon',
-        type: 'image/x-icon',
-        href: '/favicon.ico'
+    link: [
+      {
+        rel: "icon",
+        type: "image/x-icon",
+        href: "/favicon.ico"
       },
       {
-        rel: 'stylesheet',
-        href: 'http://fonts.googleapis.com/css?family=Raleway'
+        rel: "stylesheet",
+        href: "http://fonts.googleapis.com/css?family=Raleway"
       },
       {
-        rel: 'stylesheet',
-        href: '//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css'
+        rel: "stylesheet",
+        href: "//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      },
+      {
+        rel: "stylesheet",
+        href:
+          "https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
       }
-
     ],
-    script: [{
+    script: [
+      {
         src: "https://code.jquery.com/jquery-3.3.1.slim.min.js",
         type: "text/javascript"
       },
       {
-        src: '//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js',
+        src: "//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js",
         type: "text/javascript"
       },
       {
-        src: "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js",
+        src:
+          "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js",
         type: "text/javascript"
-      },
-
+      }
     ]
   },
 
@@ -63,4 +70,4 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {}
-}
+};
