@@ -2,43 +2,28 @@
   <div class="container">
     <SearchNav />
     <div class="tab-content" id="vendorTabContent">
-      <Alphabet />
-      <Comparision />
-      <Local />
-      <Numbers />
-      <Phrases />
-      <Questions />
-      <Research />
-      <Shopping />
+      <Tabs title-text="This is Alphabet" tab-id="alphabet" tab-status = "tab-pane fade show active" />
+      <Tabs title-text="This is Comparision" tab-id="comparision" tab-status = "tab-pane fade"/>
+      <Tabs title-text="This is Local" tab-id="local"  tab-status = "tab-pane fade"/>
+      <Tabs title-text="This is Numbers" tab-id="numbers" tab-status = "tab-pane fade "/>
+      <Tabs title-text="This is Phrases" tab-id="phrases" tab-status = "tab-pane fade "/>
+      <Tabs title-text="This is Questions" tab-id="questions" tab-status = "tab-pane fade "/>
+      <Tabs title-text="This is Research" tab-id="research" tab-status = "tab-pane fade "/>
+      <Tabs title-text="This is Shopping" tab-id="shopping" tab-status = "tab-pane fade "/>
     </div>
   </div>
 </template>
 
 <script>
 import SearchNav from "@/components/SearchNav";
-import Alphabet from "@/components/Alphabet";
-import Comparision from "@/components/Comparision";
-import Local from "@/components/Local";
-import Numbers from "@/components/Numbers";
-import Phrases from "@/components/Phrases";
-import Questions from "@/components/Questions";
-import Research from "@/components/Research";
-import Shopping from "@/components/Shopping";
-
+import Tabs from "@/components/Tabs";
 export default {
   components: {
-    Alphabet,
-    Comparision,
-    Local,
-    Numbers,
-    Phrases,
-    Questions,
-    Research,
-    Shopping,
+    SearchNav,
+    Tabs,
   },
 };
 </script>
 
 <style scoped>
-
 </style>
