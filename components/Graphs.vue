@@ -21,10 +21,9 @@
 </style>
 
 <script>
-import * as d3 from "d3";
 export default {
   name: "Tabs",
-   created () {
+  created() {
     var margin = { top: 20, right: 120, bottom: 20, left: 180 },
       width = 960 - margin.right - margin.left,
       height = 480 - margin.top - margin.bottom;
@@ -33,20 +32,11 @@ export default {
       duration = 750,
       root;
 
-    var tree = d3.tree().size([height, width]);
+    var tree = d3.layout.tree().size([height, width]);
 
-    /*var diagonal = d3.svg.diagonal().projection(function (d) {
+    var diagonal = d3.svg.diagonal().projection(function (d) {
       return [d.y, d.x];
-    });*/
-
-    var diagonal = d3
-      .linkHorizontal()
-      .x(function (d) {
-        return d.x;
-      })
-      .y(function (d) {
-        return d.y;
-      });
+    });
 
     var svg = d3
       .select("body")
