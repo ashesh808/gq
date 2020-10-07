@@ -2,8 +2,7 @@ export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: "keyword",
-    meta: [
-      {
+    meta: [{
         charset: "utf-8"
       },
       {
@@ -16,8 +15,7 @@ export default {
         content: ""
       }
     ],
-    link: [
-      {
+    link: [{
         rel: "icon",
         type: "image/x-icon",
         href: "/favicon.ico"
@@ -32,12 +30,10 @@ export default {
       },
       {
         rel: "stylesheet",
-        href:
-          "https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
+        href: "https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
       }
     ],
-    script: [
-      {
+    script: [{
         src: "https://code.jquery.com/jquery-3.3.1.slim.min.js",
         type: "text/javascript"
       },
@@ -46,10 +42,10 @@ export default {
         type: "text/javascript"
       },
       {
-        src:
-          "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js",
+        src: "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js",
         type: "text/javascript"
-      }
+      },
+
     ]
   },
 
