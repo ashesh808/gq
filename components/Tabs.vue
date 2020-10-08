@@ -1,6 +1,5 @@
 <template>
   <div :class="tabStatus" :id="tabId" role="tabpanel">
-    <h1>{{ titleText }}</h1>
   </div>
 </template>
 

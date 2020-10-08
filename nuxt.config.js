@@ -31,7 +31,9 @@ export default {
       {
         rel: "stylesheet",
         href: "https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
-      }
+      },
+    
+
     ],
     script: [
       {
@@ -50,14 +52,19 @@ export default {
         src: "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js",
         type: "text/javascript"
       },
+      {
+        src: "http://d3js.org/d3.v3.min.js",
+        type: "text/javascript"
+      },
       
-
 
     ]
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
+  css: [
+    '@/assets/css/graphs.css',
+  ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [],

@@ -11,19 +11,24 @@
       <Tabs title-text="This is Research" tab-id="research" tab-status = "tab-pane fade "/>
       <Tabs title-text="This is Shopping" tab-id="shopping" tab-status = "tab-pane fade "/>
     </div>
+    <Graphs />
   </div>
 </template>
 
 <script>
 import SearchNav from "@/components/SearchNav";
 import Tabs from "@/components/Tabs";
+import Graphs from "@/components/Graphs";
+
 
 export default {
   components: {
     SearchNav,
     Tabs,
+    Graphs
   },
 };
 </script>
 <style scoped>
+
 </style>

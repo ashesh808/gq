@@ -1,32 +1,52 @@
 <template></template>
 <style scoped>
-.node {
-  cursor: pointer;
-}
-.node circle {
-  fill: #fff;
-  stroke: steelblue;
-  stroke-width: 1.5px;
-}
-
-.node text {
-  font: 10px sans-serif;
-}
-
-.link {
-  fill: none;
-  stroke: #ccc;
-  stroke-width: 1.5px;
-}
 </style>
 
 <script>
 export default {
   name: "Tabs",
-  created() {
-    var margin = { top: 20, right: 120, bottom: 20, left: 180 },
-      width = 960 - margin.right - margin.left,
-      height = 480 - margin.top - margin.bottom;
+  beforeMount() {
+    var treeData = [
+      {
+        name: "what is amazon",
+        children: [
+          {
+            name: "Is it good to buy from Amazon?",
+            children: [
+              {
+                name: "What is Amazon and how does it work?",
+                children: [
+                  {
+                    name: "How do Beginners sell on Amazon?",
+                  },
+                  {
+                    name: "How does Amazon pay work?",
+                  },
+                ],
+              },
+              {
+                name: "What is Amazon exactly?",
+                children: [
+                  {
+                    name: "How did Amazon start?",
+                  },
+                  {
+                    name: "How does Amazon's system work?",
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            name: "What is the main purpose of Amazon?",
+          },
+        ],
+      },
+    ];
+    // ************** Generate the tree diagram	 *****************
+    var margin = { top: 20, right: 120, bottom: 20, left: 120 },
+      width = 1080 - margin.right - margin.left,
+      height = 960 - margin.top - margin.bottom;
 
     var i = 0,
       duration = 750,
@@ -46,29 +66,13 @@ export default {
       .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    d3.json(
-      "https://raw.githubusercontent.com/codera21/panchashil-fe/master/str.json",
-      function (error, flare) {
-        if (error) throw error;
+    root = treeData[0];
+    root.x0 = height / 2;
+    root.y0 = 0;
 
-        root = flare;
-        root.x0 = height / 2;
-        root.y0 = 0;
+    update(root);
 
-        function collapse(d) {
-          if (d.children) {
-            d._children = d.children;
-            d._children.forEach(collapse);
-            d.children = null;
-          }
-        }
-
-        root.children.forEach(collapse);
-        update(root);
-      }
-    );
-
-    d3.select(self.frameElement).style("height", "480px");
+    d3.select(self.frameElement).style("height", "500px");
 
     function update(source) {
       // Compute the new tree layout.
@@ -105,7 +109,7 @@ export default {
       nodeEnter
         .append("text")
         .attr("x", function (d) {
-          return d.children || d._children ? -10 : 10;
+          return d.children || d._children ? -13 : 13;
         })
         .attr("dy", ".35em")
         .attr("text-anchor", function (d) {
@@ -126,7 +130,7 @@ export default {
 
       nodeUpdate
         .select("circle")
-        .attr("r", 4.5)
+        .attr("r", 10)
         .style("fill", function (d) {
           return d._children ? "lightsteelblue" : "#fff";
         });
