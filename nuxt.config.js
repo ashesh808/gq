@@ -76,8 +76,18 @@ export default {
   buildModules: [],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [],
+  modules: [
+    '@nuxtjs/axios',
+  ],
+  
+  axios: {
+    baseURL:
+      process.env.NODE_ENV === 'production'
+        ? 'ttp://localhost:3000'
+        : 'http://localhost:3000',
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {}
+  build: {},
+
 };

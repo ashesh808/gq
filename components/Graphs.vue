@@ -4,8 +4,8 @@
 
 <script>
 export default {
-  name: "Tabs",
-  beforeMount() {
+  name: "Graphs",
+  mounted() {
     var treeData = [
       {
         name: "ashesh",
