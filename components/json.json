@@ -1,0 +1,24 @@
+{
+  "data": {
+    "what is amazon?": {
+      "Is it good to buy from Amazon?": {},
+      "What is Amazon and how does it work?": {
+        "How do Beginners sell on Amazon?": [],
+        "How does Amazon pay work?": ["Is it safe to pay with Amazon pay?", "What is the benefit of Amazon pay?", "How does Amazon pay monthly work?", "How do I access my Amazon pay account?"],
+        "How does Amazon work for buyers?": ["Does Amazon protect buyers?", "How does Amazon work for sellers?", "Is selling things on Amazon worth it?", "How do you get your money from Amazon?"],
+        "What does an Amazon account do?": ["What is an Amazon account used for?", "How do you get rid of an Amazon account?", "Do Amazon accounts get deleted?", "Do you need an Amazon account to use Amazon?"]
+      },
+      "What is Amazon exactly?": {
+        "How did Amazon start?": ["When did Amazon become popular?", "How did Amazon become so successful?", "How much money did Amazon start?", "What was Amazon originally?"],
+        "How does Amazon's system work?": ["How does Amazon pay work?", "How does Amazon's supply chain work?", "What system does Amazon use?", "How does Amazon Buy Now work?"],
+        "Is Amazon a good thing?": ["Is buying from Amazon bad?", "Why is Amazon so great?", "Is Amazon good for society?", "What are the strengths of Amazon?"],
+        "What is the main purpose of Amazon?": ["What is Amazon's main focus?", "What is Amazon known for?", "What is the story behind Amazon?"]
+      },
+      "What is the main purpose of Amazon?": {}
+    }
+  },
+  "message": "complete",
+  "question": "what is amazon?",
+  "questions_count": 39,
+  "status": true
+}
