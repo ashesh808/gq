@@ -29,6 +29,7 @@ export default {
       .get("http://similarbin.com:8000/status?id=2")
       .then(({ data }) => {
         this.data = data.data;
+        this.processKeys(data.data);
         this.kys = Object.keys(this.data);
         this.seckys = Object.keys(this.kys);
         console.log(this.skys);
@@ -39,6 +40,10 @@ export default {
       });
   },
   mouted() {},
+  methods: {
+    
+    },
+  },
 };
 </script>
 <style scoped>

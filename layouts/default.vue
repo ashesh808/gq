@@ -5,7 +5,8 @@
   </div>
 </template>
 
-<style>
+<style> 
+/** global  */
 </style>
 
 <script>
