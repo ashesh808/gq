@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <!-- <SearchNav /> -->
-    <!-- <div class="tab-content" id="vendorTabContent">
+    <SearchNav />
+    <div class="tab-content" id="vendorTabContent">
       <Tabs
         title-text="This is Alphabet"
         tab-id="alphabet"
@@ -42,8 +42,8 @@
         tab-id="shopping"
         tab-status="tab-pane fade "
       />
-    </div> -->
-    <ul>
+    </div>
+    <!-- <ul>
       <li
         v-for="(secondLvlQuestionObj, secondLvlQuestion) in questions"
         :key="secondLvlQuestion"
@@ -67,21 +67,21 @@
           </li>
         </ul>
       </li>
-    </ul>
-    <!--<Graphs /> -->
+    </ul> -->
+   <!-- <Graphs /> -->
   </div>
 </template>
 
 <script>
-// import SearchNav from "@/components/SearchNav";
-// import Tabs from "@/components/Tabs";
-//import Graphs from "@/components/Graphs";
+import SearchNav from "@/components/SearchNav";
+import Tabs from "@/components/Tabs";
+import Graphs from "@/components/Graphs";
 
 export default {
   components: {
-    // SearchNav,
-    // Tabs,
-    //Graphs
+    SearchNav,
+    Tabs,
+    Graphs,
   },
   data() {
     return {
