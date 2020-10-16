@@ -32,11 +32,10 @@ export default {
         rel: "stylesheet",
         href: "https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
       },
-    
+
 
     ],
-    script: [
-      {
+    script: [{
         src: "https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js",
         type: "text/javascript"
       },
@@ -56,7 +55,7 @@ export default {
         src: "http://d3js.org/d3.v3.min.js",
         type: "text/javascript"
       },
-      
+
 
     ]
   },
@@ -79,12 +78,11 @@ export default {
   modules: [
     '@nuxtjs/axios',
   ],
-  
+
   axios: {
-    baseURL:
-      process.env.NODE_ENV === 'production'
-        ? 'ttp://localhost:3000'
-        : 'http://localhost:3000',
+    baseURL: process.env.NODE_ENV === 'production' ?
+      'ttp://localhost:3000' :
+      'http://localhost:3000',
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)

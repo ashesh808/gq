@@ -1,6 +1,6 @@
 <template>
   <div :class="tabStatus" :id="tabId" role="tabpanel">
-    <div v-if=" tabId === 'local' ">
+    <div v-if=" tabId === 'alphabet' ">
       <Local />
     </div>
   </div>
