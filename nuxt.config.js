@@ -30,6 +30,10 @@ export default {
       },
       {
         rel: "stylesheet",
+        href: "//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      },
+      {
+        rel: "stylesheet",
         href: "https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
       },
 
@@ -81,8 +85,7 @@ export default {
 
   axios: {
     baseURL: process.env.NODE_ENV === 'production' ?
-      'ttp://localhost:3000' :
-      'http://localhost:3000',
+      'ttp://localhost:3000' : 'http://localhost:3000',
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)

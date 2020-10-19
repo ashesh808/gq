@@ -9,10 +9,12 @@
             type="text"
             class="form-control search-bar"
             placeholder="Search for the keyword"
+            v-model="keyword"
+            @keyup.enter="search"
           />
           <div class="input-group-append">
-            <button class="btn btn-secondary" type="button">
-              <i class="fa icon-magnifier"></i>
+            <button class="btn btn-secondary" type="button" value="Search">
+              <i class="fa fa-search"></i>
             </button>
           </div>
         </div>
@@ -31,7 +33,25 @@ export default {
   components: {
     Nav,
   },
+   data() {
+    return {
+      keyword: "",
+    };
+  },
+  created() {
+     this.$axios
+      .get("http://similarbin.com:8000/search?question=".keyword)
+      .then(function (response) {
+        console.log(response);
+      })}
+
+  //  methods: {
+  //   search() {
+  //     this.$router.push(`/products?search=${this.keyword}`);
+  //   },
+  // },
 };
+ 
 </script>
 
 <style scoped>
