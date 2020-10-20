@@ -39,8 +39,9 @@ export default {
     };
   },
   created() {
+    
      this.$axios
-      .get("http://similarbin.com:8000/search?question=".keyword)
+      .get("http://similarbin.com:8000/search?question=" + this.keyword)
       .then(function (response) {
         console.log(response);
       })}

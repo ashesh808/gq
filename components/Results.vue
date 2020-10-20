@@ -26,30 +26,36 @@
                     </button>
                   </h5>
                 </div>
-                <div
-                  v-if="thirdLvlQuestionObj in secondLvlQuestionObj === null"
-                >
-                  There are no sub-questions
-                </div>
-                <div v-else>There are sub-questions</div>
-                <div class="card-body">
-                  <ul>
-                    <li
-                      v-for="(thirdLvlQuestionObj,
+                <!-- <div v-for="(thirdLvlQuestionObj,
                       thirdLvlQuestion) in secondLvlQuestionObj"
-                      :key="thirdLvlQuestion"
-                    >
-                      <span>{{ thirdLvlQuestion }}</span>
-                      <ul class="laslLvl">
-                        <li
-                          v-for="lastLvlQuestion in thirdLvlQuestionObj"
-                          :key="lastLvlQuestion"
-                        >
-                          {{ lastLvlQuestion }}
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
+                      :key="thirdLvlQuestion" v-if=" thirdLvlQuestionObj !== null"> -->
+                <div
+                  v-for="(thirdLvlQuestionObj,
+                  thirdLvlQuestion) in secondLvlQuestionObj"
+                  :key="thirdLvlQuestion"
+                >
+                  <div
+                    class="card-body"
+                    v-if="thirdLvlQuestionObj in secondLvlQuestionObj !== null"
+                  >
+                    <ul>
+                      <li
+                        v-for="(thirdLvlQuestionObj,
+                        thirdLvlQuestion) in secondLvlQuestionObj"
+                        :key="thirdLvlQuestion"
+                      >
+                        <span>{{ thirdLvlQuestion }}</span>
+                        <ul class="laslLvl">
+                          <li
+                            v-for="lastLvlQuestion in thirdLvlQuestionObj"
+                            :key="lastLvlQuestion"
+                          >
+                            {{ lastLvlQuestion }}
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -113,7 +119,7 @@ section {
 }
 
 #accordion-style-1 .card-body {
-  border-top: 2px solid #343b3f;
+  border-bottom: 2px solid #343b3f;
 }
 
 #accordion-style-1 .card-header .btn.collapsed .fa.main {
