@@ -1,7 +1,7 @@
 <template>
   <div class="row">
-    <div class="col"><Results /></div>
-    <div class="col"><Graphs /></div>
+    <div class="col-6"><Results /></div>
+    <div class="col-6"><Graphs /></div>
   </div>
 
   <!-- <ul>

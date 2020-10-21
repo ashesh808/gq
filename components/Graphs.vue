@@ -1,4 +1,6 @@
-<template></template>
+<template>
+  <div class="graph-container"></div>
+</template>
 <style scoped>
 </style>
 
@@ -189,7 +191,7 @@ export default {
     });
 
     var svg = d3
-      .select("body")
+      .select("div[class='graph-container']")
       .append("svg")
       .attr("width", width + margin.right + margin.left)
       .attr("height", height + margin.top + margin.bottom)
