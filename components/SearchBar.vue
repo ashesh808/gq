@@ -18,8 +18,9 @@
               type="button"
               value="Search"
               @click="searchItem()"
-            ></button>
-            <i class="fa fa-search"></i>
+            >
+              <i class="fa fa-search"></i>
+            </button>
           </div>
         </div>
         <p class="lead text-muted my-2">
