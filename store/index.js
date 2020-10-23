@@ -3,12 +3,21 @@ import Vuex from 'vuex'
 const createStore = () => {
   return new Vuex.Store({
     state: () => ({
-      counter: 0
+      counter: 0,
+      keyword: '',
+      response: []
     }),
     mutations: {
-      increment(state) {
-        state.counter++
+      searchResponse(state, payload) {
+        state.response = payload;
+        state.response.push(payload);
+      },
+      getters: {
+          getresponse(state) {
+              return state.response;
+          }
       }
+
     }
   })
 }
